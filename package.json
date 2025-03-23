@@ -1,15 +1,17 @@
 {
   "name": "tradestream",
   "module": "index.ts",
-  "type": "module",
-  "private": true,
-  "workspaces": ["apps/*"],
   "devDependencies": {
     "@biomejs/biome": "1.9.4",
     "@types/bun": "1.2.5",
     "turbo": "^2.4.4",
     "typescript": "^5.8.2"
   },
+  "engines": {
+    "node": ">=20 <=22"
+  },
+  "packageManager": "bun@1.2.5",
+  "private": true,
   "resolutions": {
     "**/react": "*",
     "**/react-dom": "*"
@@ -53,8 +55,6 @@
     "docker:down:next-telegram-bots": "docker compose stop next-telegram-bots && docker compose rm -f next-telegram-bots"
   },
   "trustedDependencies": ["@biomejs/biome"],
-  "packageManager": "bun@1.2.5",
-  "engines": {
-    "node": ">=20 <=22"
-  }
+  "type": "module",
+  "workspaces": ["apps/*"]
 }
